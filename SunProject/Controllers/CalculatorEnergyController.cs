@@ -10,7 +10,7 @@ namespace SunProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CalcEngController : ControllerBase
+    public class CalculatorEnergyController : ControllerBase
     {
         // GET: api/<CalcEngController>
         [HttpGet]

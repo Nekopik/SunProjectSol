@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SunProject.Classes
 {
-    public class CalcEng
+    public class CalculatorEnergy
     {
         [Required(ErrorMessage = "Please enter your insolation level")]
         public float Insolation { get; set; }
