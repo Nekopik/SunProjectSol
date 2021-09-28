@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
+using SunProject.Classes;
+using SunProject.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,16 +19,20 @@ namespace SunProject.Controllers
         }
 
         // GET api/<CalcEngController>/5
-        [HttpGet("{id}")]
+        /* [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
-
+        */
         // POST api/<CalcEngController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("Calculator")]
+        public ActionResult Calculation(CalculatorEnergy request)
         {
+            return Ok(new CalculatorResult
+            {
+                ActualEnergyGain = 0
+            }) ;
         }
 
         // PUT api/<CalcEngController>/5
