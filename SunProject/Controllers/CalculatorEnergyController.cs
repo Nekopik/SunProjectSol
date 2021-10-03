@@ -11,12 +11,12 @@ namespace SunProject.Controllers
     public class CalculatorEnergyController : ControllerBase
     {
         [HttpPost("Calculator")]
-        public ActionResult Calculation(CalculatorEnergy Calculation)
+        public ActionResult Calculation(CalculatorEnergy c)
         {
             return Ok(new CalculatorResult
             {
-                ActualEnergyGain = 0
-            }) ;
+                ActualEnergyGain = (c.Insolation*c.WspKor*c.Power*c.WW)/c.NatProm
+            });
         }
     }
 }
